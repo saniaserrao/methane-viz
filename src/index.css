@@ -1,0 +1,4 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0f172a; overflow: hidden; }
+.maplibregl-popup-content { padding: 12px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.maplibregl-popup-close-button { font-size: 16px; padding: 4px 8px; }
