@@ -1,4 +1,4 @@
-export function LayerToggle({ layers, onToggle, panelOpen, onPanelToggle, plumeCount }) {
+export function LayerToggle({ layers, onToggle, panelOpen, onPanelToggle, plumeCount, year }) {
   return (
     <div style={{
       position: 'absolute',
@@ -67,11 +67,11 @@ export function LayerToggle({ layers, onToggle, panelOpen, onPanelToggle, plumeC
         ))}
 
         <div style={{ marginTop: 10, paddingTop: 10, borderTop: '1px solid rgba(255,255,255,0.1)', fontSize: 11, color: '#94a3b8' }}>
-          Click a plume box to inspect
+          Click a hex or plume to inspect
         </div>
       </div>
 
-      {/* CH4 concentration legend for Sentinel-5P heatmap */}
+      {/* CH4 anomaly legend */}
       {layers.find(l => l.id === 'hotspots')?.visible && (
         <div style={{
           background: 'rgba(15, 20, 30, 0.85)',
@@ -83,26 +83,46 @@ export function LayerToggle({ layers, onToggle, panelOpen, onPanelToggle, plumeC
           fontSize: 11,
           minWidth: 220,
         }}>
-          <div style={{ fontWeight: 700, marginBottom: 8, letterSpacing: 1, fontSize: 11, color: '#7dd3fc', textTransform: 'uppercase' }}>
-            CH4 Concentration · Sentinel-5P
+          <div style={{
+            fontWeight: 700, marginBottom: 8, letterSpacing: 1,
+            fontSize: 11, color: '#7dd3fc', textTransform: 'uppercase',
+            display: 'flex', alignItems: 'center', gap: 6,
+          }}>
+            CH₄ Anomaly · Sentinel-5P · {year}
+            <span
+              title="How much methane in that hex deviates from the baseline mean for that location, measured by Sentinel-5P satellite."
+              style={{
+                width: 14, height: 14,
+                borderRadius: '50%',
+                border: '1px solid #7dd3fc',
+                color: '#7dd3fc',
+                fontSize: 9,
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'default',
+                flexShrink: 0,
+                userSelect: 'none',
+                lineHeight: 1,
+              }}
+            >i</span>
           </div>
 
-          {/* Gradient bar */}
+          {/* Gradient bar matching hexFillLayer color stops */}
           <div style={{
             height: 10, borderRadius: 4, marginBottom: 6,
-            background: 'linear-gradient(to right, rgba(33,102,172,0.8), rgba(103,169,207,0.9), rgba(209,229,240,1), rgba(253,219,199,1), rgba(239,138,98,1), rgba(178,24,43,1))',
+            background: 'linear-gradient(to right, #1e3a5f, #2563eb, #1e293b, #f59e0b, #ef4444, #7f1d1d)',
           }} />
 
-          {/* Labels */}
           <div style={{ display: 'flex', justifyContent: 'space-between', color: '#94a3b8', fontSize: 10 }}>
-            <span>1700</span>
-            <span>1900</span>
-            <span>2100</span>
-            <span>2300</span>
-            <span>2500+</span>
+            <span>−5</span>
+            <span>−2</span>
+            <span>0</span>
+            <span>+2</span>
+            <span>+5</span>
           </div>
           <div style={{ textAlign: 'center', color: '#64748b', fontSize: 10, marginTop: 4 }}>
-            ppb (dry air, bias corrected)
+            ppb anomaly (clipped ±50, display ±5)
           </div>
         </div>
       )}
