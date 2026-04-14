@@ -661,7 +661,7 @@ export function MapView() {
               whiteSpace: 'nowrap',
             }}
             onMouseEnter={function (e) {
-              e.currentTarget.style.background = 'rgba(239,68,68,0.30)'
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)'
               e.currentTarget.style.color = '#ffffff'
             }}
             onMouseLeave={function (e) {
