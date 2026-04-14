@@ -72,7 +72,7 @@ export function UnepPlumePopup({ feature, onClose }) {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
           <div>
             <div style={{ fontWeight: 700, fontSize: 13, color: '#f97316' }}>
-              UNEP Plume · {p.country}
+              Plume · {p.country}
             </div>
             <div style={{ fontSize: 10, color: '#475569', marginTop: 2 }}>
               {p.satellite || '—'}
