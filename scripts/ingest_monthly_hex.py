@@ -1,32 +1,3 @@
-#!/usr/bin/env python3
-"""
-ingest_monthly_hex.py
-=====================
-Ingests monthly hex CSVs into the Supabase `monthly_hex_data` table.
-
-Supported datasets
-------------------
-  Romania  Aug / Sept  2025  → Romania_Monthly_AugSept.csv
-  Poland   Feb / March 2026  → Poland_Monthly_FebMarch.csv   (when ready)
-  Italy    June / July 2025  → Italy_Monthly_JuneJuly.csv    (when ready)
-
-Usage
------
-  pip install pandas supabase python-dotenv tqdm
-
-  # Single file
-  python ingest_monthly_hex.py --file Romania_Monthly_AugSept.csv \
-         --country Romania --year 2025
-
-  # Batch (reads DATASETS list below)
-  python ingest_monthly_hex.py --batch
-
-Environment variables (.env or shell export)
---------------------------------------------
-  SUPABASE_URL      = https://xxxx.supabase.co
-  SUPABASE_SERVICE_KEY = eyJ...   (use service-role key for inserts)
-"""
-
 import argparse
 import json
 import os
