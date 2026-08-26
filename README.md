@@ -44,14 +44,14 @@ Methara closes that gap through a stack of interconnected capabilities:
 
 ## The Explorer App
 
-This repository contains Methara's **interactive methane intelligence explorer** — a map-based interface for investigating CH₄ anomalies and point-source plume detections across space and time.
+This repository contains Methara : **interactive methane intelligence explorer** — a map-based interface for investigating CH₄ anomalies and point-source plume detections across space and time.
 
 ### Data layers
 
-**CH₄ Anomaly Grid — Sentinel-5P / TROPOMI**
+**CH₄ Anomaly Grid : Sentinel-5P / TROPOMI**
 Annual composite anomaly maps (2019–2025) tessellated into H3 hexagonal cells. Each cell is coloured by mean CH₄ concentration deviation from background (ppb), surfacing regional hotspots that point sensors miss entirely. Scroll the year slider to watch emission patterns evolve.
 
-**Plume Detections — CarbonMapper**
+**Plume Detections : CarbonMapper**
 Individual emission events with georeferenced bounding polygons, false-colour SWIR plume imagery overlaid on the basemap, matched-filter absorption flux estimates, and IME cross-validated flux where available. Every detection links sector classification, platform provenance, wind conditions, and detection datetime.
 
 ### What you can do
@@ -62,12 +62,6 @@ Individual emission events with georeferenced bounding polygons, false-colour SW
 - **Click any plume** to fly the map to its location, load the SWIR overlay, and compare MFA and IME emission estimates side by side
 - **Toggle layers** independently to focus on anomaly context, point sources, or both simultaneously
 
-
-## Contact & Early Access
-
-Methara is actively engaging with early use cases across industry, climate finance, and regulatory applications.
-
-**LinkedIn:** [Methara](https://www.linkedin.com/company/methara)
 
 ---
 
