@@ -13,11 +13,6 @@
 
 ---
 
-Methane monitoring today often stops at detection. Methara goes further.
-
-We are a multi-satellite methane intelligence platform that fuses Earth Observation data from multiple sensors, applies physics-guided geospatial machine learning, and translates atmospheric signals into **actionable climate insights** — for industry, regulators, and climate applications at scale.
-
----
 
 ## The Problem
 
